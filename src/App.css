@@ -43,3 +43,43 @@
 .home-title {
   margin-bottom: 0;
 }
+
+.Min-height-components{
+  min-height: 85vh;
+}
+
+.Footer-general{
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.Footer-general a{
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+.Footer-general a:hover{
+  color: gold; /* blue colors for links too */
+}
+
+.Min-height-footer{
+  min-height: 5vh;
+  color: white;
+}
+.Min-height-header{
+  min-height: 5vh;
+}
+
+/*  STYLES: NAVBAR - Header.js*/
+
+
+/*  STYLES: NAVIGATION - Navigation.js*/
+.Navigation{
+  margin: 2.5vh 0vh 2.5vh 0vh;
+
+}
+
+.Margin-zero{
+  margin: 0 !important;
+}
