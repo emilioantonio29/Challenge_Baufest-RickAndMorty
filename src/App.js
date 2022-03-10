@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Header from './components/Header';
 import Home from './components/Home';
-import {BrowserRouter, Routes, Route, NavLink} from 'react-router-dom'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import NotFound from './components/NotFound';
 import SearchBar from './components/barraDeBusqueda/index'
 import SearchEpisode from './components/busquedaPorEpisodio/index'
@@ -12,11 +12,13 @@ import SearchLocation from './components/busquedaPorUbicacion/index'
 import BenchmarkCharacter from './components/comparativaDePersonajes/index'
 import EpisodeDetail from './components/detalleDeEpisodios/index'
 import Footer from './components/Footer'
+import {DynamicGlobalProvider} from './context/DynamicGlobalProvider'
 
 
 function App() {
   return (
     <>
+    <DynamicGlobalProvider>
       <BrowserRouter>
         <Header></Header>
           <Routes>
@@ -31,6 +33,7 @@ function App() {
           </Routes>
         <Footer></Footer>
       </BrowserRouter>    
+    </DynamicGlobalProvider>
     
     </>
   );

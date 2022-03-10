@@ -3,32 +3,41 @@ import {NavLink} from 'react-router-dom'
 
 const Navigation = (props) =>{
 
-  React.useEffect(()=>{
-      //LOGIC: 
+    React.useEffect(()=>{
+        //LOGIC: 
 
-      return () =>{
-      //Unmount
+        return () =>{
+        //Unmount
 
-      }
-  }, [])
+        }
+    }, [])
 
 
-  return(
-    <>
-        <div className='container Navigation'>
-            <nav aria-label="breadcrumb">
-                <ol className="breadcrumb Margin-zero">
-                    <li className="breadcrumb-item">
-                        <NavLink to={'/'}  className="">
-                            Home
-                        </NavLink>
-                    </li>
-                    <li className={props.class} aria-current="page">{props.text}</li>
-                </ol>
-            </nav>
-        </div>
-    </>
-  );
+    return(
+        <>
+            <div className='container Navigation'>
+                <nav aria-label="breadcrumb">
+                    <ol className="breadcrumb Margin-zero">
+                        <li className="breadcrumb-item breadcrumb-item-hover">
+                            <NavLink to={'/'} style={{textDecoration: 'none', color: "black"}}>
+                                Home
+                            </NavLink>
+                        </li>
+                        <li className={props.class}>
+                            <NavLink to={'/'} style={{textDecoration: 'none', color: "black"}}>
+                                {props.text}
+                            </NavLink>
+                        </li>
+                        <li className="">
+                            <NavLink to={'/'}  className="" style={{textDecoration: 'none', color: "black"}}>
+                                
+                            </NavLink>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </>
+    );
 }
 
 export default Navigation;
