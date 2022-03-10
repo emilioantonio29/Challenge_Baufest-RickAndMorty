@@ -11,7 +11,7 @@ const OneEpisode = (props) =>{
     const episodeNotFound= () =>{
       swal({
           title: "¡Opps!",
-          text: `Episodio no encontrado. Por favor intenta nuevamente.`,
+          text: `Episodio no encontrado. Por favor intenta nuevamente con otro id.`,
           icon: "warning",
           buttons: {
               confirm : {text:'Cerrar',className:'msgStyle'} 

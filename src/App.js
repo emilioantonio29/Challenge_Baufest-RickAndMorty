@@ -29,7 +29,7 @@ function App() {
             <Route path="/busqueda-por-personaje" element={<SearchCharacter/>}/>
             <Route path="/busqueda-por-ubicacion" element={<SearchLocation/>}/>
             <Route path="/comparativa-de-personajes" element={<BenchmarkCharacter/>}/>
-            <Route path="/detalle-de-episodios" element={<EpisodeDetail/>}/>
+            {/* <Route path="/detalle-de-episodios" element={<EpisodeDetail/>}/> */}
           </Routes>
         <Footer></Footer>
       </BrowserRouter>    

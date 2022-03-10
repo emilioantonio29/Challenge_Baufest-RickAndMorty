@@ -39,7 +39,7 @@ const ModalEpisode = (props) =>{
                         <strong>Url: </strong> {props.data.url}
                     </p>
                     <div>
-                        <h5>Apariciones de personajes:</h5>
+                        <p><strong>Apariciones de personajes:</strong></p>
                         {props.data.characters.map((element, index)=>{
                             return(
                                 <EpisodeDetail characterList={element} key={index}></EpisodeDetail>

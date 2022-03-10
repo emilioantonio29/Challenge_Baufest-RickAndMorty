@@ -41,11 +41,11 @@ function Header() {
                   Comparativa de personajes
                 </NavLink>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <NavLink to={'/detalle-de-episodios'} activeclassname="active" className="nav-link Color-header">
                   Detalle de episodios
                 </NavLink>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
