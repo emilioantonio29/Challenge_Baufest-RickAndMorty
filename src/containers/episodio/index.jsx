@@ -67,7 +67,7 @@ const OneEpisode = (props) =>{
         <>
           <br/>
           <br/>
-          <button onClick={()=>console.log(episodes)}>episodes</button>
+          {/* <button onClick={()=>console.log(episodes)}>episodes</button> */}
             {loader ? 
             <div className="">
                 <div style={{padding: "10px"}} className='d-flex justify-content-center'>
