@@ -4,7 +4,7 @@ import Character from '../../containers/personaje/index'
 
 const SearchCharacter = () =>{
 
-  const [inputCharacter, setInputValue] = React.useState("");
+  const [inputCharacter, setInputCharacter] = React.useState("");
   const [numberBool, setNumberBool] = React.useState(false);
   const [characterData, setCharacterData] = React.useState("");
   const [showCharacterComponent, setShowCharacterComponent] = React.useState(false);
@@ -12,7 +12,7 @@ const SearchCharacter = () =>{
 
   const inputCharacterData = (e) =>{
     e.preventDefault()
-    setInputValue(e.nativeEvent.target.value)
+    setInputCharacter(e.nativeEvent.target.value)
   }
 
 
@@ -26,7 +26,7 @@ const SearchCharacter = () =>{
 
     setCharacterData(inputCharacter)
     setShowCharacterComponent(true)
-    setInputValue("");
+    setInputCharacter("");
     setRender(render ? false: true)
   };
 
@@ -42,7 +42,7 @@ const SearchCharacter = () =>{
 
   return(
     <>
-      <Navigation text="Busqueda por personaje" class="breadcrumb-item"></Navigation>
+      <Navigation path="/busqueda-por-personaje" text="Busqueda por personaje" class="breadcrumb-item"></Navigation>
       <section className="container Box-section">
         {/* <button onClick={()=>{console.log(inputValue)}}>test</button> */}
         <div className="jumbotron">

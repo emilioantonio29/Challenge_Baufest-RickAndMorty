@@ -24,12 +24,12 @@ const Navigation = (props) =>{
                             </NavLink>
                         </li>
                         <li className={props.class}>
-                            <NavLink to={'/'} style={{textDecoration: 'none', color: "black"}}>
+                            <NavLink disabled to={props.path ? props.path : '/'} style={{textDecoration: 'none', color: "black"}}>
                                 {props.text}
                             </NavLink>
                         </li>
                         <li className="">
-                            <NavLink to={'/'}  className="" style={{textDecoration: 'none', color: "black"}}>
+                            <NavLink disabled to={'/'}  className="" style={{textDecoration: 'none', color: "black"}}>
                                 
                             </NavLink>
                         </li>

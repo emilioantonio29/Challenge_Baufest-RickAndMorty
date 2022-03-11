@@ -34,7 +34,7 @@ const SearchEpisode = () =>{
 
   return(
     <>
-      <Navigation text="Busqueda por episodio" class="breadcrumb-item"></Navigation>
+      <Navigation path="/busqueda-por-episodio" text="Busqueda por episodio" class="breadcrumb-item"></Navigation>
       <section className="container Box-section">
         <div className="jumbotron">
           <h3 className="">Consigna:</h3>
