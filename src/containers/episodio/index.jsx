@@ -3,7 +3,7 @@ import axios from "axios";
 import CardEpisode from '../episodioCard/index'
 import swal from 'sweetalert'
 
-const OneEpisode = (props) =>{
+const Episode = (props) =>{
 
     const [loader, setLoader] = React.useState(false);
     const [episodes, setEpisodes] = React.useState([]);
@@ -90,4 +90,4 @@ const OneEpisode = (props) =>{
     );
   }
 
-export default OneEpisode;
+export default Episode;

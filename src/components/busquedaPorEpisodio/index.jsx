@@ -1,5 +1,5 @@
 import React from 'react';
-import OneEpisode from '../../containers/episodio/index';
+import Episode from '../../containers/episodio/index';
 import Navigation from '../Navigation';
 import {DynamicGlobalContext} from '../../context/DynamicGlobalProvider'
 
@@ -51,7 +51,7 @@ const SearchEpisode = () =>{
          </form>
       </section>
       <section className="container">
-        {showEpisodeComponent ? <OneEpisode episode={episodeId}></OneEpisode> : <></>}
+        {showEpisodeComponent ? <Episode episode={episodeId}></Episode> : <></>}
       </section>
     </>
   );

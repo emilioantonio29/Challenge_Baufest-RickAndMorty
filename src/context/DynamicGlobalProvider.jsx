@@ -7,7 +7,9 @@ export const DynamicGlobalContext = createContext();
 export const DynamicGlobalProvider = ({children}) =>{
 
     const [test, setTest] = useState(true);
-    const [allCharacters, setAllCharacters] = useState([]);
+    const [character1, setCharacter1] = useState({});
+    const [character2, setCharacter2] = useState({});
+    const [character3, setCharacter3] = useState({});
     
     useEffect(()=>{
         //LOGIC: 
@@ -23,7 +25,7 @@ export const DynamicGlobalProvider = ({children}) =>{
         <DynamicGlobalContext.Provider 
             value={
                 {
-                    test, allCharacters
+                    test, character1, setCharacter1, character2, setCharacter2, character3, setCharacter3
                 }}>
             {children}
         </DynamicGlobalContext.Provider>
