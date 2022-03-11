@@ -5,10 +5,23 @@ import {DynamicGlobalContext} from '../../context/DynamicGlobalProvider'
 const ModalBenchmarkCharacters = (props) =>{
 
     const {character1, setCharacter1, character2, setCharacter2, character3, setCharacter3} = React.useContext(DynamicGlobalContext); 
+
+
+    const compare = (obj1, obj2) => {
+        let data = 0;
+        for(let i = 0; i<obj1.episode.length;i++){
+            for(let j = 0; j<obj2.episode.length;j++){
+                if(obj1.episode[i] == obj2.episode[j]){
+                    data++;
+                    break;
+                }
+            }
+        }
+        return data;
+    }
     
-    React.useEffect(()=>{
+    React.useEffect( async ()=>{
         //LOGIC: 
-        console.log(character1)
 
         return () =>{
         //Unmount
@@ -31,13 +44,13 @@ const ModalBenchmarkCharacters = (props) =>{
                 </Modal.Header>
                 <Modal.Body>
                     {/* <h4>+ INFO</h4> */}
-                    <button onClick={()=>console.log(character1)}>test</button>
                     <div className="card">
                         <div className="card-header">
                             Personaje 1: {character1.name ? character1.name : "No Cargado"}
                         </div>
                         <div className="card-body">
-                            <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <p className="card-text">{character1.name && character2.name? `Cantidad de episodios compartidos con ${character2.name}: ${compare(character1,character2)}` : ""}</p>
+                            <p className="card-text">{character1.name && character3.name? `Cantidad de episodios compartidos con ${character3.name}: ${compare(character1,character3)}` : ""}</p>
                         </div>
                     </div>
                     <br/>
@@ -46,7 +59,8 @@ const ModalBenchmarkCharacters = (props) =>{
                             Personaje 2: {character2.name ? character2.name : "No Cargado"}
                         </div>
                         <div className="card-body">
-                            <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <p className="card-text">{character1.name && character2.name? `Cantidad de episodios compartidos con ${character1.name}: ${compare(character1,character2)}` : ""}</p>
+                            <p className="card-text">{character2.name && character3.name? `Cantidad de episodios compartidos con ${character3.name}: ${compare(character2,character3)}` : ""}</p>
                         </div>
                     </div>
                     <br/>
@@ -55,7 +69,8 @@ const ModalBenchmarkCharacters = (props) =>{
                             Personaje 3: {character3.name ? character3.name : "No Cargado"}
                         </div>
                         <div className="card-body">
-                            <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <p className="card-text">{character1.name && character3.name? `Cantidad de episodios compartidos con ${character1.name}: ${compare(character1,character3)}` : ""}</p>
+                            <p className="card-text">{character2.name && character3.name? `Cantidad de episodios compartidos con ${character2.name}: ${compare(character2,character3)}` : ""}</p>
                         </div>
                     </div>
                 </Modal.Body>
