@@ -50,7 +50,7 @@ const OneCharacter = (props) =>{
             .then(()=>{
           })
             .catch((err)=>{
-            console.log(err.response.status)
+            // console.log(err.response.status)
             if(err.response.status == 404){
               episodeNotFound()
             }else{
@@ -72,7 +72,7 @@ const OneCharacter = (props) =>{
             .then(()=>{
           })
             .catch((err)=>{
-            console.log(err.response.status)
+            // console.log(err.response.status)
             if(err.response.status == 404){
               episodeNotFound()
             }else{
